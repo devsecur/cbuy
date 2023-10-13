@@ -1,10 +1,19 @@
+"use client"
+import Input, { InputType } from "@/components/atoms/input/Input";
+import { useState } from "react";
+import { Value } from "sass";
+
 const Home = () => {
+// let inputValue = ''
+const [inputValue, setValue] = useState('Man');
+
     return (
       <>
-        <div className="bg-blue-800 mx-auto my-[50vh] text-3xl text-red-900 font-bold underline">
-          Hello Word d ed d ee
+        <div className=" mx-20 my-[20vh]">
+          <h2>Pages</h2>
+         <Input onChange={setValue} type={InputType.Primary} />
+         {inputValue}
         </div>
-        
       </>
     );
   };

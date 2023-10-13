@@ -1,0 +1,19 @@
+.container {
+  @apply bg-gray-200 p-10;
+}
+
+.input {
+  border-radius: 25px;
+  background: #f6f7f8;
+  height: 48px;
+  align-self: stretch;
+  &.primary {
+    border: 1px solid #bbc1c9;
+  }
+  &.secondary {
+    border: 15px solid var(--foundation-blue-blue-500, #1b2940);
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
