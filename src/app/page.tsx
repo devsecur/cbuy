@@ -32,12 +32,17 @@ const Home = () => {
         <div className="flex flex-wrap">
           <div className="input container">
             <caption>Input</caption>
-            <Input onChange={setValue} type={InputType.Secondary} />
+            <Input
+              onChange={setValue}
+              type={InputType.Secondary}
+              placeholder="Input field"
+            />
             {inputValue}
           </div>
           <div className="dropdown container">
             <caption>dropdown</caption>
             <Dropdown
+              placeholder="Dropdown"
               onChange={setSelectedOption}
               value={selectedOption}
               options={options}

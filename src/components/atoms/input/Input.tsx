@@ -1,25 +1,41 @@
-"use client"
-import React, { ChangeEvent, useEffect, useRef } from 'react';
-import styles from './Input.module.scss';
+"use client";
+import React, { ChangeEvent, useEffect, useRef } from "react";
+import styles from "./Input.module.scss";
+import { StyleType } from "@/lib/types/styles.type";
 
 export enum InputType {
-  Primary = 'primary',
-  Secondary = 'secondary'
+  Primary = "primary",
+  Secondary = "secondary",
 }
 
 export interface PropType {
-  onChange?:(value:string)=>void|undefined
-  value?:string|undefined
-  type?: InputType | 'secondary'| 'primary'
+  onChange?: (value: string) => void | undefined;
+  value?: string | undefined;
+  type?: InputType | "secondary" | "primary";
+  placeholder?: string;
+  style?: StyleType;
 }
 
-export default function Input({onChange, value, type}:PropType) {
+export default function Input({
+  onChange,
+  value,
+  type,
+  placeholder,
+  style,
+}: PropType) {
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const inputClassName = type === InputType.Secondary ? `${styles.input} ${styles.secondary}` : `${styles.input} ${styles.primary}`;
+  const inputClassName =
+    type === InputType.Secondary
+      ? `${styles.input} ${styles.secondary}`
+      : `${styles.input} ${styles.primary}`;
 
+  const inputStyle = {
+    ...style,
+    width: style?.width ? style?.width : "339px",
+  };
   function handleChangeInput(event: ChangeEvent<HTMLInputElement>) {
-    onChange?onChange(event.target.value):null
+    onChange ? onChange(event.target.value) : null;
   }
 
   useEffect(() => {
@@ -30,7 +46,15 @@ export default function Input({onChange, value, type}:PropType) {
 
   return (
     <div className={styles.container}>
-      <input className={inputClassName} type="text" ref={inputRef} value={value} onChange={handleChangeInput} />
+      <input
+        style={inputStyle}
+        placeholder={placeholder}
+        className={inputClassName}
+        type="text"
+        ref={inputRef}
+        value={value}
+        onChange={handleChangeInput}
+      />
     </div>
   );
 }

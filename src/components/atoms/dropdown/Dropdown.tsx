@@ -1,7 +1,6 @@
 "use client";
 import React, { ChangeEvent, useEffect, useRef } from "react";
 import styles from "./Dropdown.module.scss";
-import { CSSProperties } from "react";
 import { StyleType } from "@/lib/types/styles.type";
 
 export interface OptionType {
@@ -18,6 +17,7 @@ export interface PropType {
   options: OptionType[];
   type?: DropdownType | "secondary" | "primary";
   style?: StyleType;
+  placeholder?: string;
 }
 
 export default function Dropdown({
@@ -26,6 +26,7 @@ export default function Dropdown({
   options,
   type,
   style,
+  placeholder,
 }: PropType) {
   const selectRef = useRef<HTMLSelectElement>(null);
 
@@ -55,6 +56,7 @@ export default function Dropdown({
         <></>
       </span>
       <select
+        placeholder={placeholder}
         className={selectClassName}
         ref={selectRef}
         value={value}

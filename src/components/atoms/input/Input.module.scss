@@ -1,8 +1,9 @@
 .container {
-  @apply p-2;
+  @apply p-2 w-fit;
 }
 
-.input {
+input.input {
+  padding: 0 15px;
   border-radius: 25px;
   background: #f6f7f8;
   height: 48px;
