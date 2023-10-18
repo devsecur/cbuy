@@ -1,0 +1,41 @@
+.container {
+  // To be edit
+  @apply p-2 relative block w-fit;
+}
+
+select.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: flex;
+  width: 339px;
+  height: 48px;
+  padding: 0 15px;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px solid #bbc1c9;
+  background: #f6f7f8;
+  &.primary {
+    border: 1px solid #bbc1c9;
+  }
+  &.secondary {
+    border: 1.5px solid var(--foundation-blue-blue-500, #1b2940);
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.icon {
+  @apply absolute top-2 right-2;
+  border-radius: 0px 25px 25px 0px;
+  background: var(--foundation-blue-blue-100, #b8bdc4);
+  background: #b8bdc4 url(../../../lib/assets/Icons/svg/arrow-down.svg)
+    no-repeat 50% 50%;
+  z-index: 1;
+  width: 38px;
+  border-radius: 0 25px 25px 0;
+  pointer-events: none;
+  height: 48px;
+}

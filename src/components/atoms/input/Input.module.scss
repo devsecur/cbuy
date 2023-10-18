@@ -1,5 +1,5 @@
 .container {
-  @apply bg-gray-200 p-10;
+  @apply p-2;
 }
 
 .input {
@@ -11,7 +11,7 @@
     border: 1px solid #bbc1c9;
   }
   &.secondary {
-    border: 15px solid var(--foundation-blue-blue-500, #1b2940);
+    border: 1.5px solid var(--foundation-blue-blue-500, #1b2940);
   }
   &:focus-visible {
     outline: none;
