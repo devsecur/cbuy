@@ -1,0 +1,14 @@
+.container {
+  box-sizing: border-box;
+  width: 200px;
+}
+.button {
+  display: flex;
+  height: 44px;
+  padding: 0px 61.499px 0px 61.841px;
+  justify-content: flex-end;
+  align-items: center;
+
+  border-radius: 21px;
+  background: linear-gradient(0deg, #790000 0%, #bb263b 100%);
+}

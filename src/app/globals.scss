@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+caption {
+  @apply border-b-2 border-b-green-600 font-bold text-xl mb-4;
+}
+.container {
+  @apply border  p-3 shadow m-1 ml-10 flex-wrap;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+  width: 400px;
+  gap: 20px;
+}
 /*
 :root {
   --foreground-rgb: 0, 0, 0;

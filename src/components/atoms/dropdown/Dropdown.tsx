@@ -1,6 +1,8 @@
 "use client";
 import React, { ChangeEvent, useEffect, useRef } from "react";
 import styles from "./Dropdown.module.scss";
+import { CSSProperties } from "react";
+import { StyleType } from "@/lib/types/styles.type";
 
 export interface OptionType {
   value: string;
@@ -16,14 +18,6 @@ export interface PropType {
   options: OptionType[];
   type?: DropdownType | "secondary" | "primary";
   style?: StyleType;
-}
-
-export interface StyleType {
-  width?: string | number;
-  height?: string | number;
-  size?: string | number;
-  color?: string;
-  backgroundColor?: string;
 }
 
 export default function Dropdown({
