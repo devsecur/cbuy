@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 caption {
-  @apply border-b-2 border-b-green-600 font-bold text-xl mb-4;
+  @apply mb-4 border-b-2 border-b-green-600 text-xl font-bold;
 }
 .container {
-  @apply border  p-3 shadow m-1 ml-10 flex-wrap;
+  @apply m-1  ml-10 flex-wrap border p-3 shadow;
   text-wrap: wrap;
   overflow-wrap: break-word;
   width: 400px;

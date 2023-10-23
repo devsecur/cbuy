@@ -1,23 +1,23 @@
-import { StyleType } from "@/lib/types/styles.type";
-import React from "react";
-import styles from "./Typography.module.scss";
+import { StyleType } from '@/lib/types/styles.type';
+import React from 'react';
+import styles from './Typography.module.scss';
 
 export interface PropType {
   value?: string | undefined;
-  type?: TypographyType | "secondary" | "primary" | "title" | "h1";
+  type?: TypographyType | 'secondary' | 'primary' | 'title' | 'h1';
   style?: StyleType;
   children?: React.ReactNode;
 }
 export enum TypographyType {
-  Primary = "primary",
-  Subtitle = "subtitle",
-  Title = "title",
-  h1 = "h1",
-  Caption = "caption",
-  Body = "body",
+  Primary = 'primary',
+  Subtitle = 'subtitle',
+  Title = 'title',
+  h1 = 'h1',
+  Caption = 'caption',
+  Body = 'body',
 }
 function Typography({
-  value = "text",
+  value = 'text',
   type = TypographyType.Primary,
   style,
   children,

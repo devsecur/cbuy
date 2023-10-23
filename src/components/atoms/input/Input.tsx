@@ -1,17 +1,17 @@
-"use client";
-import React, { ChangeEvent, useEffect, useRef } from "react";
-import styles from "./Input.module.scss";
-import { StyleType } from "@/lib/types/styles.type";
+'use client';
+import React, { ChangeEvent, useEffect, useRef } from 'react';
+import styles from './Input.module.scss';
+import { StyleType } from '@/lib/types/styles.type';
 
 export enum InputType {
-  Primary = "primary",
-  Secondary = "secondary",
+  Primary = 'primary',
+  Secondary = 'secondary',
 }
 
 export interface PropType {
   onChange?: (value: string) => void | undefined;
   value?: string | undefined;
-  type?: InputType | "secondary" | "primary";
+  type?: InputType | 'secondary' | 'primary';
   placeholder?: string;
   style?: StyleType;
 }
@@ -32,7 +32,7 @@ export default function Input({
 
   const inputStyle = {
     ...style,
-    width: style?.width ? style?.width : "339px",
+    width: style?.width ? style?.width : '339px',
   };
   function handleChangeInput(event: ChangeEvent<HTMLInputElement>) {
     onChange ? onChange(event.target.value) : null;
@@ -50,7 +50,7 @@ export default function Input({
         style={inputStyle}
         placeholder={placeholder}
         className={inputClassName}
-        type="text"
+        type='text'
         ref={inputRef}
         value={value}
         onChange={handleChangeInput}

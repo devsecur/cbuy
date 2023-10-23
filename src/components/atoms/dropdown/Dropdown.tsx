@@ -1,21 +1,21 @@
-"use client";
-import React, { ChangeEvent, useEffect, useRef } from "react";
-import styles from "./Dropdown.module.scss";
-import { StyleType } from "@/lib/types/styles.type";
+'use client';
+import React, { ChangeEvent, useEffect, useRef } from 'react';
+import styles from './Dropdown.module.scss';
+import { StyleType } from '@/lib/types/styles.type';
 
 export interface OptionType {
   value: string;
   label: string;
 }
 export enum DropdownType {
-  Primary = "primary",
-  Secondary = "secondary",
+  Primary = 'primary',
+  Secondary = 'secondary',
 }
 export interface PropType {
   onChange?: (value: string) => void | undefined;
   value?: string | undefined;
   options: OptionType[];
-  type?: DropdownType | "secondary" | "primary";
+  type?: DropdownType | 'secondary' | 'primary';
   style?: StyleType;
   placeholder?: string;
 }
@@ -42,7 +42,7 @@ export default function Dropdown({
 
   const selectStyle = {
     ...style,
-    width: style?.width ? style?.width : "339px",
+    width: style?.width ? style?.width : '339px',
   };
   useEffect(() => {
     if (selectRef.current) {

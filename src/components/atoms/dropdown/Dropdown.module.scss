@@ -1,6 +1,6 @@
 .container {
   // To be edit
-  @apply p-2 relative block w-fit;
+  @apply relative block w-fit;
 }
 
 select.select {
@@ -28,7 +28,7 @@ select.select {
 }
 
 .icon {
-  @apply absolute top-2 right-2;
+  @apply absolute right-0;
   border-radius: 0px 25px 25px 0px;
   background: var(--foundation-blue-blue-100, #b8bdc4);
   background: #b8bdc4 url(../../../lib/assets/Icons/svg/arrow-down.svg)
