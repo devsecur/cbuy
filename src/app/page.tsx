@@ -7,6 +7,7 @@ import Typography, {
 } from '@/components/atoms/typography/Typography';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
+import { IconRepository } from '@/lib/repository/icon.repository';
 import { useState } from 'react';
 
 const Home = () => {
@@ -82,6 +83,13 @@ const Home = () => {
               selectValue={selectedOption}
               onChange={setSelectedOption}
             />
+          </div>
+          <div className='Icons container'>
+            <caption>Icons</caption>
+            <div>
+              {/* <IconRepository.HeartIcon color='blue' /> */}
+              <IconRepository.PlusIcon props='red' />
+            </div>
           </div>
         </div>
       </div>
