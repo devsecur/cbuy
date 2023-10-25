@@ -22,6 +22,7 @@ export enum TypographyType {
   h1 = 'h1',
   Caption = 'caption',
   Body = 'body',
+  tertiary = 'tertairy',
 }
 function Typography({
   value = 'text',
@@ -38,8 +39,12 @@ function Typography({
       ? styles.title
       : type === TypographyType.h1
       ? styles.h1
+      : type === TypographyType.Caption
+      ? styles.caption
       : type === TypographyType.Body
       ? styles.body
+      : type === TypographyType.tertiary
+      ? styles.tertiary_btn
       : styles.primary
   }`;
   const IconStyleProps = {

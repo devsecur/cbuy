@@ -1,0 +1,7 @@
+.container {
+  @apply box-border;
+}
+
+.button_search {
+  @apply flex flex-col gap-[5.99px];
+}

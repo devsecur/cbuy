@@ -41,4 +41,16 @@
     font-weight: 400;
     line-height: 30px; /* 200% */
   }
+  &.caption {
+    color: #8e98a5;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &.tertiary_btn {
+    color: #1e314b;
+    // font-family: Raleway;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20.7px; /* 115% */
+  }
 }

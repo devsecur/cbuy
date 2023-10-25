@@ -5,6 +5,7 @@ import Input, { InputType } from '@/components/atoms/input/Input';
 import Typography, {
   TypographyType,
 } from '@/components/atoms/typography/Typography';
+import SearchButton from '@/components/molecules/SearchButton/SearchButton';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
 import { IconRepository } from '@/lib/repository/icon.repository';
@@ -55,7 +56,7 @@ const Home = () => {
           </div>
           <div className='Button container'>
             <div className='caption'>Button</div>
-            <Button />
+            <Button type='tertiary' value='Button' />
           </div>
           <div className='Text container w-fit'>
             <div className='caption'>Text</div>
@@ -66,7 +67,7 @@ const Home = () => {
                   <Typography
                     value={el.value}
                     type={el.type}
-                    iconStyle={{ width:30}}
+                    iconStyle={{ width: 30 }}
                   />
                 </div>
               ))}
@@ -92,6 +93,10 @@ const Home = () => {
               <IconRepository.PlusIcon />
               <IconRepository.PersonIcon />
             </div>
+          </div>
+          <div className='Search_Button container'>
+            <div className='caption'>Search Button</div>
+            <SearchButton title={'Industry sectors'} caption={'All areas'} />
           </div>
         </div>
       </div>
