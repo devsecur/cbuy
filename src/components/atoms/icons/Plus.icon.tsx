@@ -2,7 +2,7 @@ import { IconPropsType } from '@/lib/types/icons.type';
 import React from 'react';
 
 const PlusIcon = ({
-  color = 'red',
+  color = '#7C8895',
   width = 24,
   height = 24,
   props,

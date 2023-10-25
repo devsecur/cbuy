@@ -11,7 +11,7 @@ import { IconRepository } from '@/lib/repository/icon.repository';
 import { useState } from 'react';
 
 const Home = () => {
-  const t = '';
+  // const t = '';
   const [inputValue, setValue] = useState<string>();
   const options = [
     { value: 'option1', label: 'Option 1' },
@@ -19,7 +19,7 @@ const Home = () => {
     { value: 'option3', label: 'Option 3' },
   ];
   const text = [
-    { type: TypographyType.h1, value: 'Heading 1 text' },
+    { type: TypographyType.h1, value: 'Login' },
     { type: TypographyType.Title, value: 'Title Text' },
     { type: TypographyType.Subtitle, value: 'Subtitle Text' },
     { type: TypographyType.Body, value: 'Body Text' },
@@ -35,7 +35,7 @@ const Home = () => {
         <h1 className='text-3xl font-bold text-green-500'>Components</h1>
         <div className='flex flex-wrap'>
           <div className='input container'>
-            <caption>Input</caption>
+            <div className='caption'>Input</div>
             <Input
               onChange={setValue}
               type={InputType.Secondary}
@@ -44,7 +44,7 @@ const Home = () => {
             {inputValue}
           </div>
           <div className='dropdown container'>
-            <caption>dropdown</caption>
+            <div className='caption'>dropdown</div>
             <Dropdown
               placeholder='Dropdown'
               onChange={setSelectedOption}
@@ -54,29 +54,31 @@ const Home = () => {
             {selectedOption}
           </div>
           <div className='Button container'>
-            <caption>Button</caption>
+            <div className='caption'>Button</div>
             <Button />
           </div>
           <div className='Text container w-fit'>
-            <caption>Text</caption>
+            <div className='caption'>Text</div>
             <div className=' flex flex-col flex-wrap gap-2'>
               {text.map((el, index) => (
-                <>
-                  <div key={index.toString()} className='flex gap-3'>
-                    <span className='flex uppercase'>{el.type}</span>:
-                    <Typography value={el.value} type={el.type} />
-                  </div>
-                </>
+                <div key={index.toString()} className='flex gap-3'>
+                  <span className='flex uppercase'>{el.type}</span>:
+                  <Typography
+                    value={el.value}
+                    type={el.type}
+                    iconStyle={{ width:30}}
+                  />
+                </div>
               ))}
             </div>
           </div>
           <div className='TextInput container'>
-            <caption>TextInput</caption>
+            <div className='caption'>TextInput</div>
             <TextInput onChange={setValue} text='PASSWORD' />
             {inputValue}
           </div>
           <div className='TextSelect container'>
-            <caption>TextSelect</caption>
+            <div className='caption'>TextSelect</div>
             <TextSelect
               text={'ACCOUNT TYPE'}
               options={options}
@@ -85,10 +87,10 @@ const Home = () => {
             />
           </div>
           <div className='Icons container'>
-            <caption>Icons</caption>
-            <div>
-              {/* <IconRepository.HeartIcon color='blue' /> */}
-              <IconRepository.PlusIcon props='red' />
+            <div>Icons</div>
+            <div className='flex gap-2'>
+              <IconRepository.PlusIcon />
+              <IconRepository.PersonIcon />
             </div>
           </div>
         </div>

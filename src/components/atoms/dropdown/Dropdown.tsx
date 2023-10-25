@@ -28,11 +28,12 @@ export default function Dropdown({
   style,
   placeholder,
 }: PropType) {
-  const selectRef = useRef<HTMLSelectElement>(null);
+  let selectRef: React.MutableRefObject<HTMLSelectElement>;
+  selectRef = useRef<HTMLSelectElement>(null);
 
   const selectClassName =
     type === DropdownType.Secondary
-      ? `${styles.selct} ${styles.secondary}`
+      ? `${styles.select} ${styles.secondary}`
       : `${styles.select} ${styles.primary}`;
   function handleChangeSelect(event: ChangeEvent<HTMLSelectElement>) {
     if (onChange) {

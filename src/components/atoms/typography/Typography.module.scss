@@ -12,6 +12,8 @@
   color: #1e314b;
   font-size: 14px;
   line-height: 16.1px; /* 115% */
+  display: flex;
+  align-items: center;
 
   &.primary {
     @apply text-[#fff];
@@ -30,6 +32,7 @@
   }
   &.h1 {
     font-size: 21px;
+    // font-size: 14px;
     font-weight: 600;
     line-height: 24.15px; /* 115% */
   }

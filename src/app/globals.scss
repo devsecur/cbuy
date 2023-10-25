@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-caption {
+.caption {
   @apply mb-4 border-b-2 border-b-green-600 text-xl font-bold;
 }
 .container {
   @apply m-1  ml-10 flex-wrap border p-3 shadow;
-  text-wrap: wrap;
+  text-wrap: normal;
   overflow-wrap: break-word;
   width: 400px;
   gap: 20px;
