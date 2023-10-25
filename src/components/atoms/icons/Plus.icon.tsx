@@ -5,7 +5,7 @@ const PlusIcon = ({
   color = '#7C8895',
   width = 24,
   height = 24,
-  props,
+  ...props
 }: IconPropsType) => (
   <svg
     stroke={color}

@@ -12,7 +12,7 @@ export interface PropType {
   style?: StyleType;
   children?: React.ReactNode;
   icon?: keyof typeof IconRepository;
-  iconStyle?: IconPropsType
+  iconStyle?: IconPropsType;
 }
 
 export enum TypographyType {
@@ -29,7 +29,7 @@ function Typography({
   style,
   children,
   icon,
-  iconStyle
+  iconStyle,
 }: PropType) {
   const textClassName = `${styles.text} ${
     type === TypographyType.Subtitle
@@ -43,16 +43,16 @@ function Typography({
       : styles.primary
   }`;
   const IconStyleProps = {
-    ...iconStyle, width:iconStyle?.width? iconStyle.width:20, height:iconStyle?.height?iconStyle.height:20}
-  const IconComponent= IconRepository[icon];
-
+    ...iconStyle,
+    width: iconStyle?.width ? iconStyle.width : 20,
+    height: iconStyle?.height ? iconStyle.height : 20,
+  };
+  const IconComponent = IconRepository[icon];
 
   return (
     <div className={styles.container}>
       <div className={textClassName}>
-        <div>
-          {IconComponent && <IconComponent {...IconStyleProps}  />}
-        </div>
+        <div>{IconComponent && <IconComponent {...IconStyleProps} />}</div>
         <div style={style}>
           <span> {children}</span>
           <span> {value}</span>
