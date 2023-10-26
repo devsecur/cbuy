@@ -2,12 +2,16 @@
 import Button from '@/components/atoms/button/Button';
 import Dropdown from '@/components/atoms/dropdown/Dropdown';
 import Input, { InputType } from '@/components/atoms/input/Input';
+import Line from '@/components/atoms/line/Line';
 import Typography, {
   TypographyType,
 } from '@/components/atoms/typography/Typography';
-import SearchButton from '@/components/molecules/SearchButton/SearchButton';
+import SearchButton, {
+  SearchButtonPropType,
+} from '@/components/molecules/SearchButton/SearchButton';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
+import Searchbar from '@/components/organisms/Searchbar/Searchbar';
 import { IconRepository } from '@/lib/repository/icon.repository';
 import { useState } from 'react';
 
@@ -20,12 +24,29 @@ const Home = () => {
     { value: 'option3', label: 'Option 3' },
   ];
   const text = [
-    { type: TypographyType.h1, value: 'Login' },
+    { type: TypographyType.h1, value: 'Login', icon: 'PersonIcon' },
     { type: TypographyType.Title, value: 'Title Text' },
     { type: TypographyType.Subtitle, value: 'Subtitle Text' },
     { type: TypographyType.Body, value: 'Body Text' },
     // { type: TypographyType.Caption, label: "Option 1" },
     // { type: TypographyType.Primary, label: "Option 1" },
+  ];
+  const searchButton: SearchButtonPropType[] = [
+    {
+      title: 'title 1',
+      caption: 'caption ',
+      onClick: () => console.log('Function 1'),
+    },
+    {
+      title: 'title 2',
+      caption: 'caption 2',
+      onClick: () => console.log('Function 2'),
+    },
+    {
+      title: 'title 3',
+      caption: 'caption 3',
+      onClick: () => console.log('Function 3'),
+    },
   ];
 
   const [selectedOption, setSelectedOption] = useState<string>();
@@ -67,7 +88,8 @@ const Home = () => {
                   <Typography
                     value={el.value}
                     type={el.type}
-                    iconStyle={{ width: 30 }}
+                    iconStyle={{ width: 30, color: 'green' }}
+                    icon={el.icon as keyof typeof IconRepository}
                   />
                 </div>
               ))}
@@ -97,6 +119,17 @@ const Home = () => {
           <div className='Search_Button container'>
             <div className='caption'>Search Button</div>
             <SearchButton title={'Industry sectors'} caption={'All areas'} />
+          </div>
+          <div className='Line container'>
+            <div className='caption'>Line</div>
+            <Line height={10} />
+          </div>
+          <div className='Search_Bar'>
+            <div className='caption'>Search bar</div>
+            <Searchbar
+              searchButtonpProps={searchButton}
+              inputProps={{ onChange: setValue, value: inputValue }}
+            />
           </div>
         </div>
       </div>

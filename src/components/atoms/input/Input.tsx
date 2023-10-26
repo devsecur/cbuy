@@ -8,7 +8,7 @@ export enum InputType {
   Secondary = 'secondary',
 }
 
-export interface PropType {
+export interface InputPropType {
   onChange?: (value: string) => void | undefined;
   value?: string | undefined;
   type?: InputType | 'secondary' | 'primary';
@@ -22,7 +22,7 @@ export default function Input({
   type,
   placeholder,
   style,
-}: PropType) {
+}: InputPropType) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const inputClassName =

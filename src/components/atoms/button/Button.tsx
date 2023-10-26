@@ -4,7 +4,7 @@ import { StyleType } from '@/lib/types/styles.type';
 import Text, { TypographyType } from '../typography/Typography';
 import { IconRepository } from '@/lib/repository/icon.repository';
 
-export interface PropType {
+export interface ButtonPropType {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   value?: string | undefined;
   type?: 'secondary' | 'primary' | 'tertiary' | ButtonType;
@@ -25,7 +25,7 @@ export default function Button({
   icon,
   children,
   textstyle,
-}: PropType) {
+}: ButtonPropType) {
   const buttonClassName = `${styles.button} ${styles.children} ${
     type === ButtonType.Secondary
       ? styles.secondary
