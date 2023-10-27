@@ -94,7 +94,7 @@ const Home = () => {
             <div className='caption'>Text</div>
             <div className=' flex flex-col flex-wrap gap-2'>
               {text.map((el, index) => (
-                <div key={index.toString()} className='flex gap-3'>
+                <div key={index} className='flex gap-3'>
                   <span className='flex uppercase'>{el.type}</span>:
                   <Typography
                     value={el.value}

@@ -31,15 +31,14 @@ export default function Searchbar({
       </div>
       <div className={styles.btn_wrapper}>
         {searchButtonpProps?.map((el, index) => (
-          <>
+          <React.Fragment key={index}>
             <SearchButton
-              key={index}
               caption={el.caption}
               title={el.title}
               onClick={el.onClick}
             />
             {index < searchButtonpProps.length - 1 && <Line />}
-          </>
+          </React.Fragment>
         ))}
       </div>
       <Button
