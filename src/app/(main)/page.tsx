@@ -12,11 +12,17 @@ import SearchButton, {
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
 import Searchbar from '@/components/organisms/Searchbar/Searchbar';
+import useMediaQuery from '@/lib/hooks/useMediaQuery';
+import useViewportWidth from '@/lib/hooks/useViewportWidth';
 import { IconRepository } from '@/lib/repository/icon.repository';
 import { useState } from 'react';
 
 const Home = () => {
   // const t = '';
+  const viewportWidth = useViewportWidth();
+  const isMobile = useMediaQuery('(width: 600px)');
+  const t = isMobile;
+
   const [inputValue, setValue] = useState<string>();
   const options = [
     { value: 'option1', label: 'Option 1' },
@@ -55,6 +61,11 @@ const Home = () => {
     <>
       <div className=' mx-20 my-5 '>
         <h1 className='text-3xl font-bold text-green-500'>Components</h1>
+        <h2>
+          is Mobile: {isMobile} {t} -- {viewportWidth}
+          {/* useMediaQuery example */}
+          {isMobile ? <p>Mobile View</p> : <p>Desktop View</p>}
+        </h2>
         <div className='flex flex-wrap'>
           <div className='input container'>
             <div className='caption'>Input</div>
@@ -130,6 +141,7 @@ const Home = () => {
               searchButtonpProps={searchButton}
               inputProps={{ onChange: setValue, value: inputValue }}
             />
+            {viewportWidth}
           </div>
         </div>
       </div>

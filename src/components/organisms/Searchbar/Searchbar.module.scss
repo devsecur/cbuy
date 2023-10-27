@@ -1,5 +1,5 @@
 .container_searchbar {
-  @apply relative box-border flex w-full items-center justify-center rounded-[100px] border bg-white px-[24px] md:max-xl:max-w-md;
+  @apply relative box-border flex w-full items-center justify-center rounded-[100px] border bg-white px-[24px];
   box-shadow: 0px 11px 18px 0px rgba(30, 49, 75, 0.15);
   @screen sm {
     max-width: 20rem;
