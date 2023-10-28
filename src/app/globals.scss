@@ -11,7 +11,7 @@
   overflow-wrap: break-word;
   width: 400px;
   gap: 20px;
-  font-family: Helvetica;
+  // font-family: Helvetica;
 }
 
 :root {
@@ -25,6 +25,7 @@
   --cbuy-white: #ffffff;
   --cbuy-blue: #1e314b;
   $button-background: red;
+  word-wrap: break-word;
 }
 /*
 

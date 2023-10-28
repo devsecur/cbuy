@@ -1,17 +1,21 @@
 .container {
   box-sizing: border-box;
-  width: 159.5px;
+  width: fit-content;
+  height: fit-content;
 }
 .button {
+  @apply flex-wrap break-words;
   display: flex;
-  height: 44px;
+  z-index: 1;
+  height: 100%;
   padding: 0px 61.499px 0px 61.841px;
   justify-content: flex-end;
   align-items: center;
+  justify-content: center;
   border-radius: 21px;
-
+  width: 100%;
   &.children {
-    @apply h-fit flex-col;
+    @apply h-full flex-col;
   }
 
   &.primary {
@@ -19,8 +23,6 @@
   }
 
   &.secondary {
-    //
-
     display: flex;
     height: 84px;
     padding: 20.16px 8px;

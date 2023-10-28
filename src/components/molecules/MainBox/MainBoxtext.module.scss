@@ -1,0 +1,33 @@
+.mainbox_container {
+  @apply flex w-1/2 flex-col flex-wrap gap-4;
+  @apply md:break-normal;
+}
+.heading {
+  @apply w-3/5 break-words;
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  word-wrap: break-word;
+
+  .red {
+    color: #c63138;
+  }
+}
+.caption {
+  @apply w-3/5 break-words;
+  color: rgba(241, 241, 241, 0.7);
+  font-family: Helvetica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 28px;
+}
+.action {
+  @apply col-auto flex flex-col gap-2 break-words;
+  @apply md:flex-row;
+}

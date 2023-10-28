@@ -7,6 +7,7 @@ import Line from '@/components/atoms/line/Line';
 import Typography, {
   TypographyType,
 } from '@/components/atoms/typography/Typography';
+import MainBoxtext from '@/components/molecules/MainBox/MainBox';
 import SearchButton from '@/components/molecules/SearchButton/SearchButton';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
@@ -74,7 +75,7 @@ const Home = () => {
           )}
         </h2> */}
         <div className='flex flex-wrap'>
-          {true && (
+          {false && (
             <>
               <div className='input container'>
                 <div className='caption'>Input</div>
@@ -97,7 +98,7 @@ const Home = () => {
               </div>
               <div className='Button container'>
                 <div className='caption'>Button</div>
-                <Button type='tertiary' value='Button' />
+                <Button variant='secondary' value='Button' width={'full'} />
               </div>
               <div className='Text container w-fit'>
                 <div className='caption'>Text</div>
@@ -159,14 +160,28 @@ const Home = () => {
             />
             {viewportWidth}
           </div> */}
+
+              {/* dd */}
+              <div className='Box w-full'>
+                <div className='caption  font-[Helvetica] text-[40px] font-normal text-white'>
+                  Box
+                </div>
+                <Box variant='secondary'>
+                  <MainBoxtext></MainBoxtext>
+                </Box>
+              </div>
             </>
           )}
-          <div className='Box w-full'>
-            <div className='caption  font-[Helvetica] text-[40px] font-normal text-white'>
-              Box
-            </div>
-            <Box variant='primary'>Reliability</Box>
-          </div>
+
+          <Typography>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
+            laudantium. Quis modi vero molestiae repudiandae perferendis!
+            Officiis culpa laboriosam a modi ut enim neque similique,
+            repudiandae non porro, omnis iure cumque blanditiis voluptate,
+            nesciunt nobis impedit ipsam perspiciatis asperiores soluta! Dolore
+            possimus accusantium facilis nihil corrupti doloribus, velit
+            pariatur provident?
+          </Typography>
         </div>
       </div>
     </>

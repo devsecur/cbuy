@@ -27,27 +27,29 @@ export enum TypographyType {
 }
 function Typography({
   value = 'text',
-  type = TypographyType.Primary,
+  type = TypographyType.Body,
   style,
   children,
   icon,
   iconStyle,
 }: PropType) {
-  const textClassName = `${styles.text} ${
-    type === TypographyType.Subtitle
-      ? styles.subtitle
-      : type === TypographyType.Title
-      ? styles.title
-      : type === TypographyType.h1
-      ? styles.h1
-      : type === TypographyType.Caption
-      ? styles.caption
-      : type === TypographyType.Body
-      ? styles.body
-      : type === TypographyType.tertiary
-      ? styles.tertiary_btn
-      : styles.primary
-  }`;
+  // const textClassName = `${styles.text} ${
+  //   type === TypographyType.Subtitle
+  //     ? styles.subtitle
+  //     : type === TypographyType.Title
+  //     ? styles.title
+  //     : type === TypographyType.h1
+  //     ? styles.h1
+  //     : type === TypographyType.Caption
+  //     ? styles.caption
+  //     : type === TypographyType.Body
+  //     ? styles.body
+  //     : type === TypographyType.tertiary
+  //     ? styles.tertiary_btn
+  //     : styles.primary
+  // }`;
+  const textClassName = `${styles.text} ${styles[type]}`;
+
   const IconStyleProps = {
     ...iconStyle,
     width: iconStyle?.width ? iconStyle.width : 20,

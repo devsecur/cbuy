@@ -1,13 +1,17 @@
 .container {
-  max-height: 44px;
+  width: fit-content;
+  max-height: fit-content;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  // background-color: green;
+  word-wrap: break-word;
 }
 
 .text {
   text-align: center;
-  //   font-family: Raleway;
+  word-wrap: break-word;
+  text-align: left;
   font-style: normal;
   color: #1e314b;
   font-size: 14px;
