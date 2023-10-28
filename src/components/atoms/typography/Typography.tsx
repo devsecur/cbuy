@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // noinspection TypeScriptValidateTypes
 
 import { StyleType } from '@/lib/types/styles.type';
@@ -11,7 +12,7 @@ export interface PropType {
   type?: TypographyType | 'secondary' | 'primary' | 'title' | 'h1';
   style?: StyleType;
   children?: React.ReactNode;
-  icon?: keyof typeof IconRepository;
+  icon?: keyof typeof IconRepository | undefined;
   iconStyle?: IconPropsType;
 }
 
@@ -52,7 +53,14 @@ function Typography({
     width: iconStyle?.width ? iconStyle.width : 20,
     height: iconStyle?.height ? iconStyle.height : 20,
   };
-  const IconComponent = IconRepository[icon];
+
+  let IconComponent;
+
+  if (icon) {
+    IconComponent = IconRepository[icon];
+  } else {
+    IconComponent = null; // Replace with your default icon component
+  }
 
   return (
     <div className={styles.container}>

@@ -18,7 +18,14 @@ const config: Config = {
         secondary: '#00FF00',
       },
     },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
   },
   plugins: [],
+  darkMode: 'media'
 };
 export default config;

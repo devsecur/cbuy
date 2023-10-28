@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/atoms/button/Button.tsx"
-  ],
+, "src/lib/repository/tailwindClasses.ts"  ],
   "exclude": ["node_modules"]
 }

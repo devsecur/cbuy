@@ -8,10 +8,13 @@ export interface OptionType {
   label: string;
 }
 export enum DropdownType {
+  // eslint-disable-next-line no-unused-vars
   Primary = 'primary',
+  // eslint-disable-next-line no-unused-vars
   Secondary = 'secondary',
 }
 export interface PropType {
+  // eslint-disable-next-line no-unused-vars
   onChange?: (value: string) => void | undefined;
   value?: string | undefined;
   options: OptionType[];
@@ -28,8 +31,7 @@ export default function Dropdown({
   style,
   placeholder,
 }: PropType) {
-  let selectRef: React.MutableRefObject<HTMLSelectElement>;
-  selectRef = useRef<HTMLSelectElement>(null);
+  const selectRef = useRef<HTMLSelectElement | null>(null);
 
   const selectClassName =
     type === DropdownType.Secondary
@@ -49,7 +51,7 @@ export default function Dropdown({
     if (selectRef.current) {
       selectRef.current.focus();
     }
-  }, []);
+  }, [selectRef]);
 
   return (
     <div className={styles.container}>
