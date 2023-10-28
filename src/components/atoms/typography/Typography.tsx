@@ -63,15 +63,15 @@ function Typography({
   }
 
   return (
-    <div className={styles.container}>
-      <div className={textClassName}>
-        <div>{IconComponent && <IconComponent {...IconStyleProps} />}</div>
-        <div style={style}>
+    <span className={styles.container}>
+      <span className={textClassName}>
+        <span>{IconComponent && <IconComponent {...IconStyleProps} />}</span>
+        <span style={style}>
           <span> {children}</span>
           <span> {value}</span>
-        </div>
-      </div>
-    </div>
+        </span>
+      </span>
+    </span>
   );
 }
 

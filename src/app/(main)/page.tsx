@@ -74,7 +74,7 @@ const Home = () => {
           )}
         </h2> */}
         <div className='flex flex-wrap'>
-          {false && (
+          {true && (
             <>
               <div className='input container'>
                 <div className='caption'>Input</div>
@@ -162,8 +162,10 @@ const Home = () => {
             </>
           )}
           <div className='Box w-full'>
-            <div className='caption '>Box</div>
-            <Box variant='primary'> sdfsdf</Box>
+            <div className='caption  font-[Helvetica] text-[40px] font-normal text-white'>
+              Box
+            </div>
+            <Box variant='primary'>Reliability</Box>
           </div>
         </div>
       </div>
