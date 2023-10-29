@@ -9,13 +9,14 @@
 }
 
 .text {
-  text-align: center;
+  @apply sm:leading-[8px] md:leading-[16.1px];
+  text-align: left;
   word-wrap: break-word;
   text-align: left;
   font-style: normal;
   color: #1e314b;
   font-size: 14px;
-  line-height: 16.1px; /* 115% */
+  line-height: 16.1px;
   display: flex;
   align-items: center;
 

@@ -62,6 +62,7 @@ export default function Button({
       : String(height).includes('px')
       ? String(height).replace('px', 'px')
       : String(height).concat('px'),
+    color: variant === 'primary' ? 'white' : '',
   };
   {
     console.log(containerStyle);
@@ -69,13 +70,21 @@ export default function Button({
   // const btnClass = `${styles.container} ${
   //   variant === ButtonType.Tertiary ?? styles.tertiary_btn
   // }`;
+  const formatStyle = {
+    ...textstyle,
+    color: variant === 'primary' ? 'white' : '',
+  };
   return (
     <div className={styles.container} style={containerStyle}>
       <button className={buttonClassName} onClick={onClick}>
         {value && (
-          <Text value={value} icon={icon} type={textType} style={textstyle} />
+          <Text value={value} icon={icon} type={textType} style={formatStyle} />
         )}
-        <div>{children}</div>
+        {!value && (
+          <Text value={value} icon={icon} type={textType} style={formatStyle}>
+            {children}
+          </Text>
+        )}
       </button>
     </div>
   );

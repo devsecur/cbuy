@@ -173,7 +173,15 @@ const Home = () => {
             </>
           )}
 
-          <Typography>
+          <Typography icon='HeartIcon'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at eum
+            quae recusandae tenetur. Nam veritatis molestiae nihil corporis
+            iusto culpa sint totam beatae, consectetur reprehenderit mollitia
+            ipsum id perspiciatis temporibus? Pariatur, id, alias quis sint
+            labore illo in repellat nobis quasi nulla deleniti, cumque tempore
+            modi. Aliquid, ipsam atque.
+          </Typography>
+          <Button variant='tertiary'>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
             laudantium. Quis modi vero molestiae repudiandae perferendis!
             Officiis culpa laboriosam a modi ut enim neque similique,
@@ -181,7 +189,7 @@ const Home = () => {
             nesciunt nobis impedit ipsam perspiciatis asperiores soluta! Dolore
             possimus accusantium facilis nihil corrupti doloribus, velit
             pariatur provident?
-          </Typography>
+          </Button>
         </div>
       </div>
     </>

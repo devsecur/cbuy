@@ -61,7 +61,7 @@ function Typography({
   if (icon) {
     IconComponent = IconRepository[icon];
   } else {
-    IconComponent = null; // Replace with your default icon component
+    IconComponent = null; // Replace with your default icon component: For now it will remain null
   }
 
   return (

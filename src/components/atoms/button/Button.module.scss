@@ -5,10 +5,11 @@
 }
 .button {
   @apply flex-wrap break-words;
+  @apply sm:pb-[0px]  sm:pl-[61.841px]  sm:pr-[61.499px] sm:pt-[0px];
   display: flex;
   z-index: 1;
   height: 100%;
-  padding: 0px 61.499px 0px 61.841px;
+  padding: 2px;
   justify-content: flex-end;
   align-items: center;
   justify-content: center;
