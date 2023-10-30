@@ -1,6 +1,7 @@
 .mainbox_container {
-  @apply flex w-1/2 flex-col flex-wrap gap-4;
-  @apply md:break-normal;
+  @apply flex w-full flex-col flex-wrap gap-4;
+  @apply md:w-1/2 md:break-normal;
+  background: #1e314b;
 }
 .heading {
   @apply w-3/5 break-words;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MainBoxtext.module.scss';
-import Button from '@/components/atoms/button/Button';
+import Button, { ButtonType } from '@/components/atoms/button/Button';
 
 const MainBoxtext: React.FC<{}> = ({}) => {
   return (
@@ -14,8 +14,10 @@ const MainBoxtext: React.FC<{}> = ({}) => {
           Investors looking for companies around them
         </div>
         <div className={styles.action}>
-          <Button variant='primary'>make an appointment</Button>
-          <Button>make an appointment</Button>
+          <Button variant={ButtonType.Custom_1}>{'Make an appointment'}</Button>
+          <Button variant={ButtonType.Custom_2}>
+            {'Book an appointment!'}
+          </Button>
         </div>
       </div>
     </>

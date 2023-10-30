@@ -44,7 +44,7 @@ export default function Searchbar({
       <Button
         value={btnProps.value}
         onClick={btnProps.onClick}
-        type={'tertiary'}
+        variant={'tertiary'}
       />
     </div>
   );

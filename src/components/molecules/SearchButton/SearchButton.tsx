@@ -12,7 +12,7 @@ export interface SearchButtonPropType {
 export default function SearchButton(props: SearchButtonPropType) {
   return (
     <div className={styles.container}>
-      <Button onClick={props.onClick} value={undefined} type='secondary'>
+      <Button onClick={props.onClick} value={undefined} variant='secondary'>
         <div className={styles.button_search}>
           <Text value={props.title} type='title' />
           <Text value={props.caption} type={TypographyType.Caption} />

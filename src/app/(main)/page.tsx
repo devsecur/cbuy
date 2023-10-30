@@ -1,5 +1,4 @@
 'use client';
-import Box from '@/components/atoms/box/Box';
 import Button from '@/components/atoms/button/Button';
 import Dropdown from '@/components/atoms/dropdown/Dropdown';
 import Input, { InputType } from '@/components/atoms/input/Input';
@@ -7,10 +6,11 @@ import Line from '@/components/atoms/line/Line';
 import Typography, {
   TypographyType,
 } from '@/components/atoms/typography/Typography';
-import MainBoxtext from '@/components/molecules/MainBox/MainBox';
+// import Carousel from '@/components/molecules/Carousel/Carousel';
 import SearchButton from '@/components/molecules/SearchButton/SearchButton';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
+import BoxImage from '@/components/templates/BoxImage/BoxImage';
 // import Searchbar from '@/components/organisms/Searchbar/Searchbar';
 // import useCustomQueries from '@/lib/hooks/useCustomQueries';
 // import useMediaQuery from '@/lib/hooks/useMediaQuery';
@@ -164,32 +164,11 @@ const Home = () => {
               {/* dd */}
               <div className='Box w-full'>
                 <div className='caption  font-[Helvetica] text-[40px] font-normal text-white'>
-                  Box
+                  <BoxImage />
                 </div>
-                <Box variant='secondary'>
-                  <MainBoxtext></MainBoxtext>
-                </Box>
               </div>
             </>
           )}
-
-          <Typography icon='HeartIcon'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero at eum
-            quae recusandae tenetur. Nam veritatis molestiae nihil corporis
-            iusto culpa sint totam beatae, consectetur reprehenderit mollitia
-            ipsum id perspiciatis temporibus? Pariatur, id, alias quis sint
-            labore illo in repellat nobis quasi nulla deleniti, cumque tempore
-            modi. Aliquid, ipsam atque.
-          </Typography>
-          <Button variant='tertiary'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum,
-            laudantium. Quis modi vero molestiae repudiandae perferendis!
-            Officiis culpa laboriosam a modi ut enim neque similique,
-            repudiandae non porro, omnis iure cumque blanditiis voluptate,
-            nesciunt nobis impedit ipsam perspiciatis asperiores soluta! Dolore
-            possimus accusantium facilis nihil corrupti doloribus, velit
-            pariatur provident?
-          </Button>
         </div>
       </div>
     </>

@@ -23,7 +23,9 @@ export enum TypographyType {
   h1 = 'h1',
   Caption = 'caption',
   Body = 'body',
-  tertiary = 'tertairy',
+  tertiary = 'tertiary',
+  custom_white = 'custom_white',
+  custom_red = 'custom_red',
 }
 function Typography({
   value = 'text',

@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  // background-color: green;
   word-wrap: break-word;
 }
 
@@ -51,11 +50,26 @@
     font-size: 18px;
     font-weight: 400;
   }
-  &.tertiary_btn {
+  &.tertiary {
     color: #1e314b;
-    // font-family: Raleway;
     font-size: 18px;
     font-weight: 600;
     line-height: 20.7px; /* 115% */
+  }
+  &.custom_red {
+    color: #97242a;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 122.222% */
+  }
+  &.custom_white {
+    color: #fff !important;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 122.222% */
   }
 }

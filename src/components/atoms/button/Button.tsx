@@ -23,6 +23,10 @@ export enum ButtonType {
   Secondary = 'secondary',
   // eslint-disable-next-line no-unused-vars
   Tertiary = 'tertiary',
+  // eslint-disable-next-line no-unused-vars
+  Custom_1 = 'custom_1',
+  // eslint-disable-next-line no-unused-vars
+  Custom_2 = 'custom_2',
 }
 export default function Button({
   onClick,
@@ -47,6 +51,12 @@ export default function Button({
     case ButtonType.Tertiary:
       textType = TypographyType.tertiary;
       break;
+    case ButtonType.Custom_1:
+      textType = TypographyType.custom_white;
+      break;
+    case ButtonType.Custom_2:
+      textType = TypographyType.custom_red;
+      break;
     default:
       textType = TypographyType.h1;
       break;
@@ -62,11 +72,8 @@ export default function Button({
       : String(height).includes('px')
       ? String(height).replace('px', 'px')
       : String(height).concat('px'),
-    color: variant === 'primary' ? 'white' : '',
   };
-  {
-    console.log(containerStyle);
-  }
+
   // const btnClass = `${styles.container} ${
   //   variant === ButtonType.Tertiary ?? styles.tertiary_btn
   // }`;
