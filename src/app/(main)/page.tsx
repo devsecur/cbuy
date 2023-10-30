@@ -16,7 +16,12 @@ import BoxImage from '@/components/templates/BoxImage/BoxImage';
 // import useMediaQuery from '@/lib/hooks/useMediaQuery';
 // import useViewportWidth from '@/lib/hooks/useViewportWidth';
 import { IconRepository } from '@/lib/repository/icon.repository';
+import { decrement, increment } from '@/store/features/counter/counterslice';
+
+import { RootState } from '@/store/store';
+
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Home = () => {
   // const t = '';
@@ -58,6 +63,10 @@ const Home = () => {
   // ];
 
   const [selectedOption, setSelectedOption] = useState<string>();
+  const count = useSelector(
+    (state: RootState) => state.rootReducer.counter.value,
+  );
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -169,6 +178,24 @@ const Home = () => {
               </div>
             </>
           )}
+
+          <div className='flex gap-3'>
+            <button
+              className='rounded bg-blue-600 p-2 text-white'
+              aria-label='Increment value'
+              onClick={() => dispatch(increment())}
+            >
+              Increment
+            </button>
+            <span>{count}</span>
+            <button
+              aria-label='Decrement value'
+              onClick={() => dispatch(decrement())}
+              className='rounded bg-blue-600 p-2 text-white'
+            >
+              Decrement
+            </button>
+          </div>
         </div>
       </div>
     </>

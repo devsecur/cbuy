@@ -31,6 +31,7 @@
 // export default Carousel;
 
 import Image from 'next/image';
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import styles from './Carousel.module.scss';
 
@@ -40,6 +41,7 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [timerId, setTimerId] = useState<NodeJS.Timeout | null>(null);
 
   // useEffect(() => {
@@ -60,12 +62,14 @@ const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
   //   };
   // }, [images.length, timerId]);
 
+  // eslint-disable-next-line no-unused-vars
   const handlePrevClick = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
   };
 
+  // eslint-disable-next-line no-unused-vars
   const handleNextClick = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1,
