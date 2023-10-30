@@ -1,0 +1,16 @@
+.container_header {
+  display: flex;
+  width: 100%;
+  padding: 13px 112px 16px 112px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header_content {
+  @apply flex w-full flex-nowrap items-center justify-between;
+}
+.header_login_btn {
+  @apply cursor-pointer;
+}

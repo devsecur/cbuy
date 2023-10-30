@@ -2,22 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-caption {
-  @apply border-b-2 border-b-green-600 font-bold text-xl mb-4;
+.caption {
+  @apply mb-4 border-b-2 border-b-green-600 text-xl font-bold;
 }
 .container {
-  @apply border  p-3 shadow m-1 ml-10 flex-wrap;
-  text-wrap: wrap;
+  @apply m-1  ml-10 flex-wrap border p-3 shadow;
+  text-wrap: normal;
   overflow-wrap: break-word;
   width: 400px;
   gap: 20px;
+  // font-family: Helvetica;
 }
-/*
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --cbuy-red: #9b061b;
+  --cbuy-gray-1: #8e98a5;
+  --cbuy-gray-light: #c0c5cd;
+
+  --cbuy-white: #ffffff;
+  --cbuy-blue: #1e314b;
+  $button-background: red;
+  word-wrap: break-word;
 }
+/*
 
 @media (prefers-color-scheme: dark) {
   :root {

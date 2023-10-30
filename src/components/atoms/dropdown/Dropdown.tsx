@@ -1,23 +1,26 @@
-"use client";
-import React, { ChangeEvent, useEffect, useRef } from "react";
-import styles from "./Dropdown.module.scss";
-import { CSSProperties } from "react";
-import { StyleType } from "@/lib/types/styles.type";
+'use client';
+import React, { ChangeEvent, useEffect, useRef } from 'react';
+import styles from './Dropdown.module.scss';
+import { StyleType } from '@/lib/types/styles.type';
 
 export interface OptionType {
   value: string;
   label: string;
 }
 export enum DropdownType {
-  Primary = "primary",
-  Secondary = "secondary",
+  // eslint-disable-next-line no-unused-vars
+  Primary = 'primary',
+  // eslint-disable-next-line no-unused-vars
+  Secondary = 'secondary',
 }
 export interface PropType {
+  // eslint-disable-next-line no-unused-vars
   onChange?: (value: string) => void | undefined;
   value?: string | undefined;
   options: OptionType[];
-  type?: DropdownType | "secondary" | "primary";
+  type?: DropdownType | 'secondary' | 'primary';
   style?: StyleType;
+  placeholder?: string;
 }
 
 export default function Dropdown({
@@ -26,12 +29,13 @@ export default function Dropdown({
   options,
   type,
   style,
+  placeholder,
 }: PropType) {
-  const selectRef = useRef<HTMLSelectElement>(null);
+  const selectRef = useRef<HTMLSelectElement | null>(null);
 
   const selectClassName =
     type === DropdownType.Secondary
-      ? `${styles.selct} ${styles.secondary}`
+      ? `${styles.select} ${styles.secondary}`
       : `${styles.select} ${styles.primary}`;
   function handleChangeSelect(event: ChangeEvent<HTMLSelectElement>) {
     if (onChange) {
@@ -41,13 +45,13 @@ export default function Dropdown({
 
   const selectStyle = {
     ...style,
-    width: style?.width ? style?.width : "339px",
+    width: style?.width ? style?.width : '339px',
   };
   useEffect(() => {
     if (selectRef.current) {
       selectRef.current.focus();
     }
-  }, []);
+  }, [selectRef]);
 
   return (
     <div className={styles.container}>
@@ -55,6 +59,7 @@ export default function Dropdown({
         <></>
       </span>
       <select
+        placeholder={placeholder}
         className={selectClassName}
         ref={selectRef}
         value={value}

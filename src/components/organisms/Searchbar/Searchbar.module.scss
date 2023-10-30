@@ -1,0 +1,26 @@
+.container_searchbar {
+  @apply relative box-border flex w-full items-center justify-center rounded-[100px] border bg-white px-[24px];
+  box-shadow: 0px 11px 18px 0px rgba(30, 49, 75, 0.15);
+  @screen sm {
+    max-width: 20rem;
+  }
+
+  @screen md {
+    max-width: 24rem;
+  }
+
+  @screen lg {
+    max-width: 32rem;
+  }
+
+  @screen xl {
+    max-width: fit-content;
+  }
+
+  .input_wrapper {
+    @apply mr-[100px];
+  }
+  .btn_wrapper {
+    @apply flex gap-[40px];
+  }
+}

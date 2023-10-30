@@ -1,12 +1,31 @@
-import "./globals.scss";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import './globals.scss';
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import Providers from '@/store/StoreProvider';
 
-const inter = Inter({ subsets: ["latin"] });
-
+const raleway = localFont({
+  src: [
+    {
+      path: '../lib/assets/fonts/raleway/Raleway-VariableFont_wght.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../lib/assets/fonts/raleway/Raleway-Italic-VariableFont_wght.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-raleway',
+  display: 'swap',
+  fallback: ['Helvetic'],
+});
 export const metadata: Metadata = {
-  title: "Cbuy",
-  description: "Cbuy",
+  title: 'Cbuy',
+  description: 'Cbuy',
+  viewport: {
+    initialScale: 1,
+  },
 };
 
 export default function RootLayout({
@@ -15,8 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang='en'>
+      <body className={raleway.className}>
+        <Providers> {children}</Providers>
+      </body>
     </html>
   );
 }
