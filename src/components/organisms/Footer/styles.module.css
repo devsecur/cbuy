@@ -9,6 +9,9 @@
     background: #e4e8eb;
 }
 
-.footer > a:hover {
-    color: red;
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+    }
+    
 }
