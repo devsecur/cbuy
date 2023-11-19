@@ -1,0 +1,14 @@
+.footer {
+    scroll-snap-align: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 60px;
+    background: #e4e8eb;
+}
+
+.footer > a:hover {
+    color: red;
+}

@@ -1,5 +1,7 @@
 .cta {
     height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
     display: flex;
     flex-direction: column;
 }

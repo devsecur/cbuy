@@ -20,12 +20,17 @@
 }
 
 html {
-  scroll-behavior: smooth;
   height: 100%;
+  scroll-snap-type: proximity;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y proximity;
 }
 
 body {
   height: 100%;
+  scroll-snap-type: proximity;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y proximity;
 }
 
 :root {
