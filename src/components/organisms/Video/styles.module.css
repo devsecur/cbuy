@@ -1,0 +1,13 @@
+.videoWrapper {
+    height:100vH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background: #e4e8eb;
+}
+
+.video {
+    height: 80vH;
+    border-radius: 20px;
+}

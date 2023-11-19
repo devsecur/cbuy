@@ -10,7 +10,7 @@ import Typography, {
 import SearchButton from '@/components/molecules/SearchButton/SearchButton';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
-import BoxImage from '@/components/templates/BoxImage/BoxImage';
+import BoxImage from '@/components/molecules/BoxImage/BoxImage';
 // import Searchbar from '@/components/organisms/Searchbar/Searchbar';
 // import useCustomQueries from '@/lib/hooks/useCustomQueries';
 // import useMediaQuery from '@/lib/hooks/useMediaQuery';

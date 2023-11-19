@@ -1,0 +1,11 @@
+.search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 30px 0px;
+    background-image: url("/images/bg_search.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}

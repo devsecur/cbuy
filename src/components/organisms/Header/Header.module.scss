@@ -1,7 +1,8 @@
 .container_header {
-  display: flex;
+  position: fixed;
   width: 100%;
   padding: 13px 112px 16px 112px;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
