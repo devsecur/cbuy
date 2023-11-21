@@ -6,6 +6,7 @@ import SearchButton, {
 } from '@/components/molecules/SearchButton/SearchButton';
 import Line from '@/components/atoms/line/Line';
 import Button, { ButtonPropType } from '@/components/atoms/button/Button';
+import { IconRepository } from '@/lib/repository/icon.repository';
 
 interface SearchbarProptype {
   searchButtonpProps?: SearchButtonPropType[];
@@ -28,6 +29,9 @@ export default function Searchbar({
           onChange={inputProps.onChange}
           style={{ border: 'none', backgroundColor: 'white' }}
         />
+        <span className={styles.input_close_btn}>
+          <IconRepository.FilterIcon stroke='3' />
+        </span>
       </div>
       <div className={styles.btn_wrapper}>
         {searchButtonpProps?.map((el, index) => (
@@ -41,11 +45,11 @@ export default function Searchbar({
           </React.Fragment>
         ))}
       </div>
-      <Button
+      {/* <Button
         value={btnProps.value}
         onClick={btnProps.onClick}
         variant={'tertiary'}
-      />
+      /> */}
     </div>
   );
 }
