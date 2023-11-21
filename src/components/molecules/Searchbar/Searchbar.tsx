@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import styles from './Searchbar.module.scss';
 import Input, { InputPropType } from '@/components/atoms/input/Input';
@@ -7,6 +8,7 @@ import SearchButton, {
 import Line from '@/components/atoms/line/Line';
 import Button, { ButtonPropType } from '@/components/atoms/button/Button';
 import { IconRepository } from '@/lib/repository/icon.repository';
+import useCustomQueries from '@/lib/hooks/useCustomQueries';
 
 interface SearchbarProptype {
   searchButtonpProps?: SearchButtonPropType[];
@@ -20,6 +22,7 @@ export default function Searchbar({
   },
   btnProps = { value: 'More filter' },
 }: SearchbarProptype) {
+  const { isMobile, isTablet } = useCustomQueries();
   return (
     <div className={styles.container_searchbar}>
       <div className={styles.input_wrapper}>
@@ -27,11 +30,19 @@ export default function Searchbar({
           placeholder={inputProps.placeholder}
           value={inputProps.value}
           onChange={inputProps.onChange}
-          style={{ border: 'none', backgroundColor: 'white' }}
+          style={{
+            border: 'none',
+            backgroundColor: 'white',
+            width: isTablet ? '139px' : undefined,
+          }}
         />
-        <span className={styles.input_close_btn}>
-          <IconRepository.FilterIcon stroke='3' />
-        </span>
+        {isMobile && (
+          <>
+            <span className={styles.input_close_btn}>
+              <IconRepository.FilterIcon width={'18'} />
+            </span>
+          </>
+        )}
       </div>
       <div className={styles.btn_wrapper}>
         {searchButtonpProps?.map((el, index) => (
@@ -45,11 +56,13 @@ export default function Searchbar({
           </React.Fragment>
         ))}
       </div>
-      {/* <Button
-        value={btnProps.value}
-        onClick={btnProps.onClick}
-        variant={'tertiary'}
-      /> */}
+      {!isMobile && (
+        <Button
+          value={btnProps.value}
+          onClick={btnProps.onClick}
+          variant={'tertiary'}
+        />
+      )}
     </div>
   );
 }
