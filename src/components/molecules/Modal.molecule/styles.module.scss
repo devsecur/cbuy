@@ -1,0 +1,9 @@
+.modal_body {
+  @apply mb-4;
+}
+.modal_header {
+  @apply mb-4 text-lg font-bold uppercase;
+}
+.modal_footer {
+  @apply flex justify-end;
+}
