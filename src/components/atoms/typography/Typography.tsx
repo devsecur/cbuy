@@ -28,7 +28,7 @@ export enum TypographyType {
   custom_red = 'custom_red',
 }
 function Typography({
-  value = 'text',
+  value,
   type = TypographyType.Body,
   style,
   children,
