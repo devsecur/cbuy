@@ -1,0 +1,12 @@
+.checkbox_label {
+  @apply flex cursor-pointer items-center space-x-2;
+}
+.checkbox_input {
+  @apply text-blue-500;
+  border-radius: 2px;
+  border: 2px solid #d2d6db;
+  background: #fff;
+}
+.checkbox_name {
+  @apply ml-2;
+}

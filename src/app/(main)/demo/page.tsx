@@ -7,6 +7,7 @@ import Typography, {
   TypographyType,
 } from '@/components/atoms/typography/Typography';
 import BoxImage from '@/components/molecules/BoxImage/BoxImage';
+import Checkbox from '@/components/molecules/Checkbox/Checkbox';
 // import Carousel from '@/components/molecules/Carousel/Carousel';
 import SearchButton, {
   SearchButtonPropType,
@@ -37,6 +38,8 @@ const Home = () => {
   // const { isMobile, isTablet } = useCustomQueries();
 
   const [inputValue, setValue] = useState<string>();
+  const [checkbox, setCheck] = useState<boolean>(false);
+
   const options = [
     { value: 'option1', label: 'Option 1' },
     { value: 'option2', label: 'Option 2' },
@@ -212,18 +215,20 @@ const Home = () => {
               isOpen={isOpen}
               onClose={() => setIsOpen(false)}
             >
-              <h2 className='mb-4 bg-black p-10 text-green-800'>
-                Modal Content
-              </h2>
+              <h2 className='mb-4 text-green-800'>Modal Content</h2>
               <p>This is the content of the modal.</p>
             </Modal>
             <div style={{ position: 'fixed' }}>
               {/* Other page content */}
               <ModalTemplate>
-                <h2 className='mb-4 bg-black p-10 text-green-800'>
-                  Modal Content
-                </h2>
+                <h2 className='mb-4 text-green-800'>Modal Content</h2>
                 <p>This is the content of the modal.</p>
+
+                <Checkbox
+                  checked={checkbox}
+                  label='test'
+                  onChange={() => setCheck((prev) => !prev)}
+                />
               </ModalTemplate>
             </div>
           </div>

@@ -46,6 +46,7 @@ export default function Searchbar({
           onChange={inputProps.onChange}
           style={{
             border: 'none',
+            outline: 'none',
             backgroundColor: 'white',
             width: isTablet ? '139px' : undefined,
           }}
