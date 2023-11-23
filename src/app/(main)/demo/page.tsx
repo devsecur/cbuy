@@ -7,6 +7,7 @@ import Typography, {
   TypographyType,
 } from '@/components/atoms/typography/Typography';
 import BoxImage from '@/components/molecules/BoxImage/BoxImage';
+import Checkbox from '@/components/molecules/Checkbox/Checkbox';
 // import Carousel from '@/components/molecules/Carousel/Carousel';
 import SearchButton, {
   SearchButtonPropType,
@@ -14,6 +15,8 @@ import SearchButton, {
 import Searchbar from '@/components/molecules/Searchbar/Searchbar';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
+import Modal from '@/components/organisms/Modal/Modal';
+import ModalTemplate from '@/components/templates/ModalTemplate';
 // import BoxImage from '@/components/templates/BoxImage/BoxImage';
 // import Searchbar from '@/components/organisms/Searchbar/Searchbar';
 // import useCustomQueries from '@/lib/hooks/useCustomQueries';
@@ -35,6 +38,8 @@ const Home = () => {
   // const { isMobile, isTablet } = useCustomQueries();
 
   const [inputValue, setValue] = useState<string>();
+  const [checkbox, setCheck] = useState<boolean>(false);
+
   const options = [
     { value: 'option1', label: 'Option 1' },
     { value: 'option2', label: 'Option 2' },
@@ -48,11 +53,12 @@ const Home = () => {
     // { type: TypographyType.Caption, label: "Option 1" },
     // { type: TypographyType.Primary, label: "Option 1" },
   ];
+  const [isOpen, setIsOpen] = useState(false);
   const searchButton: SearchButtonPropType[] = [
     {
       title: 'title 1',
       caption: 'caption ',
-      onClick: () => console.log('Function 1'),
+      onClick: () => setIsOpen(true),
     },
     {
       title: 'title 2',
@@ -204,6 +210,27 @@ const Home = () => {
               }}
             />
             {/* {viewportWidth} */}
+            <Modal
+              title='test'
+              isOpen={isOpen}
+              onClose={() => setIsOpen(false)}
+            >
+              <h2 className='mb-4 text-green-800'>Modal Content</h2>
+              <p>This is the content of the modal.</p>
+            </Modal>
+            <div style={{ position: 'fixed' }}>
+              {/* Other page content */}
+              <ModalTemplate isOpen={isOpen} onClose={() => setIsOpen(false)}>
+                <h2 className='mb-4 text-green-800'>Modal Content</h2>
+                <p>This is the content of the modal.</p>
+
+                <Checkbox
+                  checked={checkbox}
+                  label='test'
+                  onChange={() => setCheck((prev) => !prev)}
+                />
+              </ModalTemplate>
+            </div>
           </div>
         </div>
       </div>

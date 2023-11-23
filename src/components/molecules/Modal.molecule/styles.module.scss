@@ -1,0 +1,9 @@
+.modal_body {
+  @apply mb-4 flex flex-col items-center justify-center px-[16px] py-[31px];
+}
+.modal_header {
+  @apply mb-4 text-lg font-bold uppercase;
+}
+.modal_footer {
+  @apply flex justify-end;
+}

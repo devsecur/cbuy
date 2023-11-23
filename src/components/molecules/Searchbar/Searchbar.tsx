@@ -9,15 +9,18 @@ import Line from '@/components/atoms/line/Line';
 import Button, { ButtonPropType } from '@/components/atoms/button/Button';
 import { IconRepository } from '@/lib/repository/icon.repository';
 import useCustomQueries from '@/lib/hooks/useCustomQueries';
-import useToggle from '@/lib/hooks/useToggle';
+// import useToggle from '@/lib/hooks/useToggle';
 
 interface SearchbarProptype {
   searchButtonpProps?: SearchButtonPropType[];
   inputProps?: InputPropType;
   btnProps?: ButtonPropType;
+  children?: React.ReactNode;
 }
 export default function Searchbar({
   searchButtonpProps,
+
+  children,
   inputProps = {
     placeholder: 'Suche nach...',
   },
@@ -46,6 +49,7 @@ export default function Searchbar({
           onChange={inputProps.onChange}
           style={{
             border: 'none',
+            outline: 'none',
             backgroundColor: 'white',
             width: isTablet ? '139px' : undefined,
           }}
@@ -83,6 +87,8 @@ export default function Searchbar({
           variant={'tertiary'}
         />
       )}
+
+      {children}
     </div>
   );
 }
