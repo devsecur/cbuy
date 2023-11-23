@@ -220,7 +220,7 @@ const Home = () => {
             </Modal>
             <div style={{ position: 'fixed' }}>
               {/* Other page content */}
-              <ModalTemplate>
+              <ModalTemplate isOpen={isOpen} onClose={() => setIsOpen(false)}>
                 <h2 className='mb-4 text-green-800'>Modal Content</h2>
                 <p>This is the content of the modal.</p>
 

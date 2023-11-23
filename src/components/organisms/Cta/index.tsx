@@ -5,15 +5,16 @@ import Search from '@/components/molecules/Search';
 import Slider from '@/components/molecules/Slider';
 import Searchbar from '@/components/molecules/Searchbar/Searchbar';
 import { SearchButtonPropType } from '@/components/molecules/SearchButton/SearchButton';
+import ModalTemplate from '@/components/templates/ModalTemplate';
 
 const Cta = () => {
   const [inputValue, setValue] = useState<string>();
-
+  const [isOpen, setIsOpen] = useState(false);
   const searchButton: SearchButtonPropType[] = [
     {
       title: 'title 1',
       caption: 'caption ',
-      onClick: () => console.log('Function 1'),
+      onClick: () => setIsOpen(true),
     },
     {
       title: 'title 2',
@@ -28,15 +29,23 @@ const Cta = () => {
   ];
   return (
     <div className={styles.cta}>
+      <div className={styles.backdrop}></div>
       <Search />
-      <Searchbar
-        searchButtonpProps={searchButton}
-        inputProps={{
-          onChange: setValue,
-          value: inputValue,
-          placeholder: 'Suche...',
-        }}
-      />
+      <div className={styles.searchModal}>
+        <Searchbar
+          searchButtonpProps={searchButton}
+          inputProps={{
+            onChange: setValue,
+            value: inputValue,
+            placeholder: 'Suche...',
+          }}
+        />
+        <ModalTemplate
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+        ></ModalTemplate>
+      </div>
+
       <Slider />
     </div>
   );

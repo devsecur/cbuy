@@ -1,7 +1,6 @@
 // import CheckboxIcon from './CheckboxIcon';
-import CheckboxIcon from '@/components/atoms/icons/Checkbox.icon';
-import CheckboxLabel from './CheckboxLabel';
 import styles from './Checkbox.module.scss';
+import Typography from '@/components/atoms/typography/Typography';
 interface CheckboxProps {
   checked: boolean;
   label: string;
@@ -18,8 +17,8 @@ const Checkbox: React.FC<CheckboxProps> = ({ checked, label, onChange }) => {
         checked={checked}
         onChange={onChange}
       />
-      <CheckboxIcon checked={checked} />
-      <CheckboxLabel>{label}</CheckboxLabel>
+      {/* <CheckboxIcon checked={checked} /> */}
+      <Typography>{label}</Typography>
     </label>
   );
 };
