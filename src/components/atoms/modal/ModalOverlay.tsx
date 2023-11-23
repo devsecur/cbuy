@@ -3,7 +3,7 @@ import styles from './Modal.atom.module.scss';
 
 interface ModalOverlayProps {
   onClose: () => void;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const ModalOverlay: FC<ModalOverlayProps> = ({ onClose, children }) => {

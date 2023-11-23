@@ -3,9 +3,10 @@
   @apply md:fixed md:bg-opacity-50;
 }
 .modal_container {
-  @apply absolute  mb-20  mt-11 h-[80%] max-w-[350px] overflow-y-auto rounded-lg bg-white shadow-lg;
-  @apply md:mt-0 md:max-w-[376px];
-  @apply top-[20%] lg:max-w-[495px];
+  @apply absolute top-0 mt-[145px] flex h-[full] max-w-[350px] flex-col items-center justify-center overflow-y-auto bg-white shadow-lg;
+  @apply md:mt-[80px] md:max-w-[376px];
+  @apply lg:top-[20%] lg:mt-[65px] lg:max-w-[495px];
+
   z-index: 3;
 
   border-radius: 12px;

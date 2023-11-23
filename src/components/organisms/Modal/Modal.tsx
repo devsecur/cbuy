@@ -35,15 +35,14 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
 
   if (!isOpen) return null;
   return (
-    <div style={{ position: 'relative' }}>
-      <ModalOverlay onClose={onClose}>
-        <div className={styles.modal_content} onClick={handleOverlayClick}>
-          <ModalContainer>
-            {title && <ModalHeader title={title} />}
-            <ModalBody>{children}</ModalBody>
-          </ModalContainer>
-        </div>
-      </ModalOverlay>
+    <div>
+      <ModalOverlay onClose={onClose}></ModalOverlay>
+      <div className={styles.modal_content} onClick={handleOverlayClick}>
+        <ModalContainer>
+          {title && <ModalHeader title={title} />}
+          <ModalBody>{children}</ModalBody>
+        </ModalContainer>
+      </div>
     </div>
   );
 };

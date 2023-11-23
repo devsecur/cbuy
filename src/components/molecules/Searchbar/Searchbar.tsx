@@ -15,9 +15,12 @@ interface SearchbarProptype {
   searchButtonpProps?: SearchButtonPropType[];
   inputProps?: InputPropType;
   btnProps?: ButtonPropType;
+  children?: React.ReactNode;
 }
 export default function Searchbar({
   searchButtonpProps,
+
+  children,
   inputProps = {
     placeholder: 'Suche nach...',
   },
@@ -84,6 +87,8 @@ export default function Searchbar({
           variant={'tertiary'}
         />
       )}
+
+      {children}
     </div>
   );
 }

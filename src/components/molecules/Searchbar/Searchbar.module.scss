@@ -50,7 +50,7 @@
       box-shadow: none !important;
       border: none !important;
     }
-    @apply flex gap-[14px];
+    @apply flex justify-between gap-[14px];
     @apply bg-white max-md:absolute max-md:left-[5%]  max-md:right-[5%] max-md:top-12 max-md:rounded-sm max-md:py-[7px] max-md:pl-[18px] max-md:pr-[13px];
     @apply lg:gap-[40px] lg:rounded-none lg:border-none lg:shadow-none;
 

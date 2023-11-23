@@ -39,7 +39,7 @@ const Cta = () => {
             value: inputValue,
             placeholder: 'Suche...',
           }}
-        />
+        ></Searchbar>
         <ModalTemplate
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
