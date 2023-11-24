@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 interface CarouselProps {
   slides: SlideData[] | any[] | SliderDataType[]; // have to change to actual type
 }
-
+// replace with actual data type and update accordingly
 export type SliderDataType = {
   img: string;
   title: string;
