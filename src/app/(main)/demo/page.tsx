@@ -13,6 +13,7 @@ import SearchButton, {
   SearchButtonPropType,
 } from '@/components/molecules/SearchButton/SearchButton';
 import Searchbar from '@/components/molecules/Searchbar/Searchbar';
+import Slider from '@/components/molecules/Slider';
 import TextInput from '@/components/molecules/TextInput/TextInput';
 import TextSelect from '@/components/molecules/TextSelect/TextSelect';
 import Modal from '@/components/organisms/Modal/Modal';
@@ -36,7 +37,24 @@ const Home = () => {
   // const isMobile = useMediaQuery('(width: 600px)');
   // const t = isMobile;
   // const { isMobile, isTablet } = useCustomQueries();
-
+  const slides = [
+    {
+      img: 'https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg',
+      text: 'First',
+    },
+    {
+      img: 'https://wallpapercave.com/wp/wp3386769.jpg',
+      text: 'Second',
+    },
+    {
+      img: 'https://wallpaperaccess.com/full/809523.jpg',
+      text: 'third',
+    },
+    {
+      img: 'https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg',
+      text: 'fourth',
+    },
+  ];
   const [inputValue, setValue] = useState<string>();
   const [checkbox, setCheck] = useState<boolean>(false);
 
@@ -196,42 +214,47 @@ const Home = () => {
                   Decrement
                 </button>
               </div>
+              <div className='Search_Bar'>
+                <div className='caption'>Search bar</div>
+                <Searchbar
+                  searchButtonpProps={searchButton}
+                  inputProps={{
+                    onChange: setValue,
+                    value: inputValue,
+                    placeholder: 'Search',
+                  }}
+                />
+                {/* {viewportWidth} */}
+                <Modal
+                  title='test'
+                  isOpen={isOpen}
+                  onClose={() => setIsOpen(false)}
+                >
+                  <h2 className='mb-4 text-green-800'>Modal Content</h2>
+                  <p>This is the content of the modal.</p>
+                </Modal>
+                <div style={{ position: 'fixed' }}>
+                  {/* Other page content */}
+                  <ModalTemplate
+                    isOpen={isOpen}
+                    onClose={() => setIsOpen(false)}
+                  >
+                    <h2 className='mb-4 text-green-800'>Modal Content</h2>
+                    <p>This is the content of the modal.</p>
+
+                    <Checkbox
+                      checked={checkbox}
+                      label='test'
+                      onChange={() => setCheck((prev) => !prev)}
+                    />
+                  </ModalTemplate>
+                </div>
+              </div>
             </>
           )}
-
-          <div className='Search_Bar'>
-            <div className='caption'>Search bar</div>
-            <Searchbar
-              searchButtonpProps={searchButton}
-              inputProps={{
-                onChange: setValue,
-                value: inputValue,
-                placeholder: 'Search',
-              }}
-            />
-            {/* {viewportWidth} */}
-            <Modal
-              title='test'
-              isOpen={isOpen}
-              onClose={() => setIsOpen(false)}
-            >
-              <h2 className='mb-4 text-green-800'>Modal Content</h2>
-              <p>This is the content of the modal.</p>
-            </Modal>
-            <div style={{ position: 'fixed' }}>
-              {/* Other page content */}
-              <ModalTemplate isOpen={isOpen} onClose={() => setIsOpen(false)}>
-                <h2 className='mb-4 text-green-800'>Modal Content</h2>
-                <p>This is the content of the modal.</p>
-
-                <Checkbox
-                  checked={checkbox}
-                  label='test'
-                  onChange={() => setCheck((prev) => !prev)}
-                />
-              </ModalTemplate>
-            </div>
-          </div>
+        </div>
+        <div className='m-auto w-[70%] pt-11'>
+          <Slider slides={slides} />
         </div>
       </div>
     </>
