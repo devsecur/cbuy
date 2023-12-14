@@ -93,6 +93,7 @@ const Slider: React.FC<CarouselProps> = ({ slides }) => {
               isDesktop ? 'block' : 'hidden'
             }`}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={currentData?.img} />
             {/* <Image
               alt='ddd'

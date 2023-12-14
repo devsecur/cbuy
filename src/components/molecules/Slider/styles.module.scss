@@ -119,10 +119,10 @@
     width: 100%;
     gap: 10px;
   }
-  .body_header_icon {
-  }
-  .body_content {
-  }
+  // .body_header_icon {
+  // }
+  // .body_content {
+  // }
   .body_footer {
     @apply flex w-full justify-start gap-[16px];
   }
@@ -130,32 +130,32 @@
 .slider_image {
   @apply w-[100%];
 }
-.isMobile {
-  .slider_details {
-  }
-  .slider_content {
-  }
-  .slider_body {
-  }
-}
-.isTablet {
-  .slider_details {
-  }
-  .slider_content {
-  }
-  .slider_body {
-  }
-}
+// .isMobile {
+//   .slider_details {
+//   }
+//   .slider_content {
+//   }
+//   .slider_body {
+//   }
+// }
+// .isTablet {
+//   .slider_details {
+//   }
+//   .slider_content {
+//   }
+//   .slider_body {
+//   }
+// }
 .isDesktop {
   //   background: #000;
-  .slider_details {
-  }
+  // .slider_details {
+  // }
   .slider_content {
     @apply items-start;
   }
-  .slider_body {
-    // align-self: flex-start;
-  }
+  // .slider_body {
+  //   // align-self: flex-start;
+  // }
   .slider_content_wrapper {
     @apply flex items-center;
     width: 100%;
