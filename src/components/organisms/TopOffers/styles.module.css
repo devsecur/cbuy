@@ -1,9 +1,9 @@
 .topOffers {
-    height:100vH;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-    background: #e4e8eb;
-    scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  background: #e4e8eb;
+  scroll-snap-align: start;
 }

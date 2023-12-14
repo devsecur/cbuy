@@ -26,6 +26,6 @@ const config: Config = {
     },
   },
   plugins: [],
-  darkMode: 'media'
+  darkMode: 'media',
 };
 export default config;
