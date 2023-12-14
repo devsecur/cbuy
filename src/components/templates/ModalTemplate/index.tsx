@@ -1,6 +1,6 @@
 import Modal from '@/components/organisms/Modal/Modal';
 import React, { FC, useState } from 'react';
-import styles from './styles.module.scss';
+// import styles from './styles.module.scss';
 import Checkbox from '@/components/molecules/Checkbox/Checkbox';
 import Button from '@/components/atoms/button/Button';
 
@@ -8,6 +8,7 @@ const ModalTemplate: FC<{
   children?: React.ReactNode;
   isOpen: boolean;
   onClose: () => void;
+  // eslint-disable-next-line no-unused-vars
 }> = ({ children, isOpen, onClose }) => {
   // const [isOpen, setIsOpen] = useState(false);
   // const handleOpenModal = () => {
@@ -96,13 +97,13 @@ const ModalTemplate: FC<{
       <Modal title={''} isOpen={isOpen} onClose={onClose}>
         <div className='h-[200%] gap-[5px] '>
           {checkItems.map((item, index) => (
-            <>
+            <React.Fragment key={index}>
               <Checkbox
                 checked={item.check}
                 label={item.label}
                 onChange={() => handleCheckboxChange(index)}
               />
-            </>
+            </React.Fragment>
           ))}
         </div>
         <div className='pt-[26px]'>

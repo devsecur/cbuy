@@ -4,11 +4,14 @@ import styles from './Input.module.scss';
 import { StyleType } from '@/lib/types/styles.type';
 
 export enum InputType {
+  // eslint-disable-next-line no-unused-vars
   Primary = 'primary',
+  // eslint-disable-next-line no-unused-vars
   Secondary = 'secondary',
 }
 
 export interface InputPropType {
+  // eslint-disable-next-line no-unused-vars
   onChange?: (value: string) => void | undefined;
   value?: string | undefined;
   type?: InputType | 'secondary' | 'primary';
